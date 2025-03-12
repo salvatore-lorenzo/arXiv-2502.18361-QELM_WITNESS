@@ -28,22 +28,22 @@ def select_experiment(num):
 
     # Load data for separable states from JSON files
     for rep in range(repetitions):
-        with open(f'./data/Separabili_{fold}_rep_'+str(rep)+'.json') as f:
+        with open(f'./datajson/Separabili_{fold}_rep_'+str(rep)+'.json') as f:
             data_sep[rep] = pd.DataFrame(json.load(f))
 
     # Load data for entangled states from JSON files
     for rep in range(repetitions):
-        with open(f'./data/Entangled_{fold}_rep_'+str(rep)+'.json') as f:
+        with open(f'./datajson/Entangled_{fold}_rep_'+str(rep)+'.json') as f:
             data_ent[rep] = pd.DataFrame(json.load(f))
 
     # Load raw data for separable states from JSON files
     for rep in range(repetitions):
-        with open(f'./data/SeparabiliRAW_{fold}_rep_'+str(rep)+'.json') as f:
+        with open(f'./datajson/SeparabiliRAW_{fold}_rep_'+str(rep)+'.json') as f:
             dataRAW_sep[rep] = pd.DataFrame(json.load(f))
 
     # Load raw data for entangled states from JSON files
     for rep in range(repetitions):
-        with open(f'./data/EntangledRAW_{fold}_rep_'+str(rep)+'.json') as f:
+        with open(f'./datajson/EntangledRAW_{fold}_rep_'+str(rep)+'.json') as f:
             dataRAW_ent[rep] = pd.DataFrame(json.load(f))
 
     # Initialize lists to store counts for separable and entangled states for each repetition
