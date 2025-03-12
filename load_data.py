@@ -13,7 +13,7 @@ Nstates =[300, 166, 300, 300, 300, 236]
 
 def select_experiment(num):
     # Select the index for the folder, number of runs, and number of states
-    select = 0
+    select = num
 
     # Get the folder name, number of repetitions, and number of states for the selected index
     fold = folders[select]
@@ -87,7 +87,7 @@ def select_experiment(num):
     anglesQW1['12_12'] = [0.3316125578789226, 1.5707963267948966, 3.03163293212240909, 0.26739621035255735, 1.201407919651270299, 1.3439035240356338, 3.141592653589793, 1.988305525776593563, 0.292390408389419524]
     anglesQW2['12_12'] = [5.8643062867009474, 1.5707963267948966, 1.32290702615153614, 1.80951555206664139, 0.65633642655426307, 2.844886680750757, 3.141592653589793, 0.685928880617840962, 2.303692086342170878]
     sep_state_ref['12_12'] = [1/2, -1/2, -1/2, 1/2]
-    ent_state_ref['12_12'] = [1/np.sqrt(2), 0, 0, -1/np.sqrt(2)]
+    ent_state_ref['12_12'] = [1/np.sqrt(2), 0, 0, 1/np.sqrt(2)]
 
     # Define angles and state references for folder '09_02'
     anglesQW1['09_02'] = [0.3316125578789226, 1.5707963267948966, 2.908160255954825, 1.5570696348907915, 1.0070977275570985, 1.3439035240356338, 3.141592653589793, 4.539779498163959, 1.5707963284790725]
@@ -160,5 +160,5 @@ def select_experiment(num):
     V2 = isometry.isometry(anglesQW2[fold])
     VV = np.kron(V1,V2)
     probs = np.array([(np.abs(VV @ st)**2) for st in states])
-    print('OK')
+    print('data loaded')
     return [expval_pauli, expval_witnesses, probs, counts_tot, VV, num_states]
