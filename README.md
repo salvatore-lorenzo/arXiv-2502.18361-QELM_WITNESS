@@ -1,7 +1,7 @@
-# QELM Witness Analysis
+# Quantum extreme learning machines for photonic entanglement witnessing
 
 ## Overview
-This repository contains code and data for analyzing experimental quantum entanglement witness measurements. The project includes tools for loading experimental data, processing it, and generating various plots related to witness operators, Pauli observables, shadow tomography, and singular values.
+This repository contains code and data for reproduce the results in [arXiv:2502.18361](https://arxiv.org/abs/2502.18361).
 
 ## Repository Structure
 ```
@@ -17,20 +17,16 @@ This repository contains code and data for analyzing experimental quantum entang
 ├── plot_defs.py            # Plotting functions
 ```
 
-## Installation
-To use this project, install the required dependencies:
-```bash
-pip install numpy pandas matplotlib
-```
-
 ## Usage
 1. Open `experiment_analysis.ipynb` in Jupyter Notebook.
-2. Run the cells sequentially to load data and generate plots.
-3. Modify parameters in `load_data.py` and `plot_defs.py` to customize analysis.
+2. Select the experimental dataset with the variable "select" and the training dataset with the variable "training".
+3. Run the cells sequentially to load data and generate plots.
+
 
 ## Analysis Features
-- **Witness Plots**: Visualization of entanglement witness measurements.
+- **Witness Plots**: Visualization of entanglement witness results.
 - **Pauli Plots**: Analysis of Pauli observables in experimental data.
-- **Shadow Tomography**: Reconstruction of quantum states using classical shadows.
+- **Shadow MSE**: Visualization of entanglement witness results obtained with Classical Shadow.
 - **Singular Value Decomposition (SVD)**: Examination of singular values from experimental data.
+
 
